@@ -42,6 +42,10 @@ else
     exit 1
 fi
 
+#add home manager
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+
 #curling configuration.nix
 curl https://raw.githubusercontent.com/MossTeK/nixConfigTemplate/main/configuration.nix > /mnt/etc/nixos/configuration.nix
 
