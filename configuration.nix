@@ -33,7 +33,6 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.tek =
     {
-      openssh.keyFiles = [ /etc/nixos/ssh/nix-home-server.pub ];
       isNormalUser = true;
       description = "tek";
       extraGroups = [ "networkmanager" "wheel" ];
@@ -72,8 +71,7 @@
     fsType = "ext4";
   };
 
-  swapDevices =
-  [ { device = "/dev/disk/by-label/swap"; } # using /by-label/ instead of /by-uuid/
+  swapDevices = [ { device = "/dev/disk/by-label/swap"; } # using /by-label/ instead of /by-uuid/
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -90,8 +88,8 @@
   services.openssh = {
   enable = true;
   # require public key authentication for better security
-  settings.PasswordAuthentication = false;
-  settings.KbdInteractiveAuthentication = false;
+  settings.PasswordAuthentication = true;
+  #settings.KbdInteractiveAuthentication = false;
   #settings.PermitRootLogin = "yes";
 };
 
