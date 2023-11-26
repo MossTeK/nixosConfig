@@ -66,6 +66,8 @@
     "@wheel"
   ];
 
+  
+
   fileSystems."/" =
   {
     device = "/dev/disk/by-label/nixos"; # using /by-label/ instead of /by-uuid/

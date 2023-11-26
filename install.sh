@@ -42,8 +42,21 @@ else
     exit 1
 fi
 
-#curling configuration.nix
+#add home-manager channel
+nix-channel --add https://github.com/nix-community/home-manager/archive/release-23.05.tar.gz home-manager
+nix-channel update
+
+#curling configuration.nix template and rebuilding
 curl https://raw.githubusercontent.com/MossTeK/nixConfigTemplate/main/configuration.nix > /mnt/etc/nixos/configuration.nix
+
+nixos-rebuild switch
+
+#creating devel directoy for nixpackaged
+mkdir ~/devel/
+cd ~/devel/
+git clone https://github.com/MossTeK/nixpkgs.git \
+    --depth=1 # Prevents cloning the entire history, which is multiple gigabytes
+git clone https://github.com/MossTeK/nixosconfig
 
 #reboot nix instance
 sudo reboot
