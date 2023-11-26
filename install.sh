@@ -47,7 +47,7 @@ nix-channel --add https://github.com/nix-community/home-manager/archive/release-
 nix-channel update
 
 #curling configuration.nix template and rebuilding
-curl https://raw.githubusercontent.com/MossTeK/nixConfigTemplate/main/configuration.nix > /mnt/etc/nixos/configuration.nix
+curl https://raw.githubusercontent.com/MossTeK/nixConfigTemplate/main/configuration.nix > /etc/nixos/configuration.nix
 
 nixos-rebuild switch
 
