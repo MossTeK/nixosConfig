@@ -65,15 +65,6 @@
     "@wheel"
   ];
 
-  fileSystems."/" =
-  {
-    device = "/dev/disk/by-label/nixos"; # using /by-label/ instead of /by-uuid/
-    fsType = "ext4";
-  };
-
-  swapDevices = [ { device = "/dev/disk/by-label/swap"; } # using /by-label/ instead of /by-uuid/
-  ];
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

@@ -31,4 +31,4 @@ The installation script partitions the disk with a basic setup designed for lega
 ## Usage
 
 You will want to curl this script as Nix dosent ship with Git, you\'ll want to
-`curl https://raw.githubusercontent.com/MossTeK/nixConfigTemplate/main/install.sh >> install.sh && chmod +x ./install.sh`
+`curl https://raw.githubusercontent.com/MossTeK/nixosconfig/dev/install.sh > install.sh && chmod +x ./install.sh`
