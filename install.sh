@@ -30,7 +30,9 @@ mount /dev/disk/by-label/nixos /mnt
 nixos-generate-config --root /mnt
 
 # declare grub boot device
-sed -i 's/^# \(boot.loader.grub.device = "\/dev\/sda"; # or "nodev" for efi only\)/\1/' /mnt/etc/nixos/configuration.nix
+cp -r /mnt/etc/nixos/configuration.nix ./configuration.nix
+sed -i 's/^# \(boot.loader.grub.device = "\/dev\/sda"; # or "nodev" for efi only\)/\1/' ./configuration.nix
+cp -r ./configuration.nix /mnt/etc/nixos/configuration.nix
 
 # Install NixOS
 nixos-install
