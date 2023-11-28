@@ -53,7 +53,7 @@
     {
       enable = true;
       systemCronJobs = [
-        "0 4 * * * /sbin/shutdown -r now"
+        "0 4 * * * /run/current-system/sw/bin/shutdown -r now"
       ];
     };
 
