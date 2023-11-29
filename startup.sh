@@ -4,5 +4,7 @@
 # Deployment of new configs still requires manual input,
 # this will be updated in the future
 
+
+cd /home/tek/devel/
 git clone https://github.com/MossTeK/nixos-config.git
 git clone https://github.com/MossTeK/nixpkgs.git 
