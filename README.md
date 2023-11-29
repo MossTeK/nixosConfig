@@ -25,6 +25,9 @@ The installation script partitions the disk with a basic setup designed for lega
 - 8GB swap partition
 - EXT4 for the main partition
 
+## startup.sh
+
+this is a temporary script that will be depricated once my ansible setup is fully taken care of, and all my playbooks are written. all it does is clone a mirror of the nixpkgs repo so we can change anything we need to there, then it clones home.nix and configuration.nix. deployment is not automated due to how early the infra is in in its development stage, since I depricated all my current infra to rebuild from scratch. 
 
 ## Usage
 
