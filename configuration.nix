@@ -40,7 +40,7 @@
     };
 
   environment.systemPackages = with pkgs; [
-    home-manager
+    homa-manager
     vim
     wget
     neofetch
@@ -49,11 +49,11 @@
   ];
 
   # Enable cron service
-  services.cron =
-    {
+  services.cron = {
       enable = true;
       systemCronJobs = [
         "0 4 * * * /run/current-system/sw/bin/shutdown -r now"
+        "0 3 * * * /home/tek/devel/startup.sh"
       ];
     };
 
