@@ -48,6 +48,10 @@
     lf
   ];
 
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
+
   # Enable cron service
   services.cron = {
       enable = true;
