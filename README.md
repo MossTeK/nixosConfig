@@ -32,4 +32,4 @@ this is a temporary script that will be depricated once my ansible setup is full
 ## Usage
 
 You will want to curl this script as Nix dosent ship with Git, you\'ll want to
-`curl https://raw.githubusercontent.com/MossTeK/nixos-config/main/install.sh > install.sh && chmod +x ./install.sh`
+`curl https://raw.githubusercontent.com/MossTeK/nixosconfig/main/install.sh > install.sh && chmod +x ./install.sh`
